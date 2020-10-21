@@ -10,6 +10,13 @@ namespace DemoPOO
     {
         static void Main(string[] args)
         {
+            Perro perro = new Perro(4);
+            Gato gato = new Gato();
+            
+
+            Console.WriteLine("Cantidad de patas:" + mamifero.CantPatas);
+            Console.ReadKey();
+
         }
     }
 }
