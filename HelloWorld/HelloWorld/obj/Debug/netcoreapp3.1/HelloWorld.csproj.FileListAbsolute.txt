@@ -1,0 +1,13 @@
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.exe
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.deps.json
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.runtimeconfig.json
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.runtimeconfig.dev.json
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.dll
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.pdb
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.csprojAssemblyReference.cache
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.AssemblyInfoInputs.cache
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.AssemblyInfo.cs
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.csproj.CoreCompileInputs.cache
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.dll
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.pdb
+F:\GitRepositorios\EstebanC99\LabNet2020\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.genruntimeconfig.cache
