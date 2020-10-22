@@ -10,8 +10,11 @@ namespace Ejercicio1
     {
         static void Main(string[] args)
         {
-
-
+            var auto = new Automovil();
+            Console.Write("Ingrese cantidad de pasajeros: ");
+            auto.CantPasajeros= Int32.Parse(Console.ReadLine());
+            Console.WriteLine("El auto tiene " + auto.CantPasajeros + "pasajeros.");
+            Console.ReadKey();
         }
     }
 }
