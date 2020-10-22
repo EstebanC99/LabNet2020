@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio1
 {
-    public abstract class Vehiculo
+    public class Avion: Transporte
     {
-        #region Atributos
-        private int cantPasajeros;
-        #endregion
-
-
-
     }
 }
