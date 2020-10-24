@@ -10,15 +10,22 @@ namespace DemoDivisionPorCero
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Ingrese el valor a dividir: ");
+            Division division = new Division(int.Parse(Console.ReadLine()));
             try
             {
-                int valor1 = int.Parse(Console.ReadLine());
-                int valor2 = int.Parse(Console.ReadLine());
+                int resultado = division.DividirPorCero();
+                Console.WriteLine($"El resultado es {resultado}.");
             }
-            catch
+            catch (ArithmeticException ex)
             {
-
+                Console.WriteLine(ex.Message);
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Console.ReadKey();
 
         }
     }
