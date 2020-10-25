@@ -11,6 +11,8 @@ namespace POOExceptions.Extensions.Tests
     [TestClass()]
     public class FloatExtensionsTests
     {
+
+        //Valida que devuelva una excepcion al dividir por cero
         [TestMethod()]
         [ExpectedException(typeof(DivideByZeroException))]
         public void DividirPorCeroTest()
@@ -24,6 +26,7 @@ namespace POOExceptions.Extensions.Tests
             //Assert controlado por la excepcion
         }
 
+        //Valdia que devuleva un resultado correspondiente a la division de dos numeros
         [TestMethod]
         public void DividirPorTest_DosNumerosReales()
         {
@@ -39,6 +42,7 @@ namespace POOExceptions.Extensions.Tests
             Assert.AreEqual(resultadoEsperado, resultado);
         }
 
+        //Valida que devuelva un error al dividir por cero
         [TestMethod]
         [ExpectedException(typeof(DivideByZeroException))]
         public void DividirPorTest_DivisiorIgualACero()

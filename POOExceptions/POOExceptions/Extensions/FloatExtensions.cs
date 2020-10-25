@@ -16,18 +16,7 @@ namespace POOExceptions.Extensions
 
         public static decimal DividirPor(this int dividendo, int divisor)
         {
-            try
-            {
-                return (decimal)dividendo / divisor;
-            }
-            catch (DivideByZeroException ex)
-            {
-                throw ex;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return (decimal)dividendo / divisor;
         }  
     }
 }
