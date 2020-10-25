@@ -1,4 +1,5 @@
-﻿using POOExceptions.Extensions;
+﻿using POOExceptions.Exceptions;
+using POOExceptions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,26 @@ namespace POOExceptions
             finally
             {
                 Console.WriteLine("Fin de ejecucion");
+            }
+
+
+            try
+            {
+                Logic.DispararExcepcion();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex.Message} del tipo {ex.GetType()}");
+            }
+
+            try
+            {
+                Console.WriteLine("Ingrese mensaje personalizado: ");
+                Logic.DispararExcepcionPersonalizada(Console.ReadLine()); ;
+            }
+            catch (CustomException ex)
+            {
+                Console.WriteLine($"{ex.Message}");
             }
 
             Console.ReadKey();
