@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7CD560CB-8800-40F8-B542-0C31DF74FC4D}</ProjectGuid>
+    <ProjectGuid>{57DC6790-291C-4010-AD8A-C93A9BCF05FC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DemoDivisionPorCero</RootNamespace>
-    <AssemblyName>DemoDivisionPorCero</AssemblyName>
+    <RootNamespace>POOExceptions</RootNamespace>
+    <AssemblyName>POOExceptions</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,16 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exceptions\CustomException.cs" />
-    <Compile Include="Exceptions\PersonalizadaException.cs" />
-    <Compile Include="Extensions\IntegerExtensions.cs" />
-    <Compile Include="Logic.cs" />
+    <Compile Include="Extensions\FloatExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
