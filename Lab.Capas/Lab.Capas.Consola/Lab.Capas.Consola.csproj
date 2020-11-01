@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{57DC6790-291C-4010-AD8A-C93A9BCF05FC}</ProjectGuid>
+    <ProjectGuid>{1340F646-6A48-4A07-B224-45F991E42B44}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>POOExceptions</RootNamespace>
-    <AssemblyName>POOExceptions</AssemblyName>
+    <RootNamespace>Lab.Capas.Consola</RootNamespace>
+    <AssemblyName>Lab.Capas.Consola</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exceptions\CustomException.cs" />
-    <Compile Include="Extensions\FloatExtensions.cs" />
-    <Compile Include="Extensions\MensajeExtensions.cs" />
-    <Compile Include="Logic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
