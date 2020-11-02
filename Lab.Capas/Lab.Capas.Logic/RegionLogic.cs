@@ -49,8 +49,9 @@ namespace Lab.Capas.Logic
             try 
             {
                 Region nuevaRegion = new Region();
-                Region ultimaRegion = this.GetRegions().Last();
-                nuevaRegion.RegionID = ultimaRegion.RegionID + 1;
+                nuevaRegion.RegionID = (from r in context.Region
+                                        orderby r.RegionID descending
+                                        select r.RegionID).FirstOrDefault() +1;
                 nuevaRegion.RegionDescription = nombre;
                 context.Region.Add(nuevaRegion);
                 context.SaveChanges();
@@ -79,7 +80,8 @@ namespace Lab.Capas.Logic
         {
             try
             {
-                context.Entry(regionActualizada).CurrentValues.SetValues(regionActualizada.RegionID);
+                //context.Entry(regionActualizada).CurrentValues.SetValues(regionActualizada.RegionID);
+                context.Entry(regionActualizada).State = System.Data.Entity.EntityState.Modified;
                 context.SaveChanges();
             }
             catch (DbEntityValidationException)

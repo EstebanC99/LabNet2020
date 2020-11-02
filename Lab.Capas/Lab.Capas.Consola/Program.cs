@@ -85,7 +85,7 @@ namespace Lab.Capas.Consola
                 case 'b':
                     BorrarRegion(new RegionLogic());
                     break;
-                case 'c':
+                case 'm':
                     ActualizarRegion(new RegionLogic());
                     break;
                 default:
