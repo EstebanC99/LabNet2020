@@ -4,6 +4,7 @@ namespace Lab.Capas.Data
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using Lab.Capas.Entities;
 
     public partial class NorthwindContext : DbContext
     {
