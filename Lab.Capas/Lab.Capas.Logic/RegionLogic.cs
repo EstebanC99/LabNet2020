@@ -10,24 +10,15 @@ using System.Threading.Tasks;
 
 namespace Lab.Capas.Logic
 {
-    public class RegionLogic
+    public class RegionLogic: BaseLogic, IEntity<Region, int>
     {
-        private readonly NorthwindContext context;
-        #region Constructor
-        public RegionLogic()
-        {
-            this.context = new NorthwindContext();
-        }
 
-        #endregion
-
-
-        public List<Region> GetRegions()
+        public List<Region> GetAll()
         {
             return context.Region.ToList();
         }
 
-        public Region GetRegion(int id)
+        public Region GetOne(int id)
         {
             try
             {
@@ -44,16 +35,14 @@ namespace Lab.Capas.Logic
 
         }
 
-        public void CargarRegion(string nombre)
+        public void Insert(Region entity)
         {
             try 
             {
-                Region nuevaRegion = new Region();
-                nuevaRegion.RegionID = (from r in context.Region
+                entity.RegionID = (from r in context.Region
                                         orderby r.RegionID descending
                                         select r.RegionID).FirstOrDefault() +1;
-                nuevaRegion.RegionDescription = nombre;
-                context.Region.Add(nuevaRegion);
+                context.Region.Add(entity);
                 context.SaveChanges();
             }
             catch (Exception)
@@ -63,7 +52,7 @@ namespace Lab.Capas.Logic
             
         }
 
-        public void BorrarRegion(int id)
+        public void Delete(int id)
         {
             try
             {
@@ -76,12 +65,11 @@ namespace Lab.Capas.Logic
             }
         }
 
-        public void ActualizarRegion(Region regionActualizada)
+        public void Update(Region entity)
         {
             try
             {
-                //context.Entry(regionActualizada).CurrentValues.SetValues(regionActualizada.RegionID);
-                context.Entry(regionActualizada).State = System.Data.Entity.EntityState.Modified;
+                context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
                 context.SaveChanges();
             }
             catch (DbEntityValidationException)

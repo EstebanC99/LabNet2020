@@ -3,6 +3,7 @@ using Lab.Capas.Entities;
 using Lab.Capas.Logic.Exceptions;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,18 +11,9 @@ using System.Threading.Tasks;
 namespace Lab.Capas.Logic
 {
  
-    public class TerritoriesLogic
+    public class TerritoriesLogic: BaseLogic, IEntity<Territories, string>
     {
-        private readonly NorthwindContext context;
-
-        #region Constructor
-        public TerritoriesLogic()
-        {
-            this.context = new NorthwindContext();
-        }
-        #endregion
-
-        public List<Territories> GetTerritories()
+        public List<Territories> GetAll()
         {
             return context.Territories.ToList();
         }
@@ -42,7 +34,7 @@ namespace Lab.Capas.Logic
             }
         }
 
-        public Territories GetTerritory(string key)
+        public Territories GetOne(string key)
         {
             try
             {
@@ -58,15 +50,11 @@ namespace Lab.Capas.Logic
             }
         }
 
-        public void CargarTerritory(string key, string descrip, int regionId)
+        public void Insert(Territories entity)
         {
             try { 
-            Territories newTerritory = new Territories();
-            newTerritory.TerritoryID = key;
-            newTerritory.TerritoryDescription = descrip;
-            newTerritory.RegionID = regionId;
-            context.Territories.Add(newTerritory);
-            context.SaveChanges();
+                context.Territories.Add(entity);
+                context.SaveChanges();
             }
             catch (Exception ex)
             {
@@ -75,7 +63,7 @@ namespace Lab.Capas.Logic
         }
 
 
-        public void BorrarTerritory(string key)
+        public void Delete(string key)
         {
             try
             {
@@ -89,6 +77,23 @@ namespace Lab.Capas.Logic
             catch (Exception)
             {
                 throw new CustomException();
+            }
+        }
+
+        public void Update(Territories entity)
+        {
+            try
+            {
+                context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+                context.SaveChanges();
+            }
+            catch (DbEntityValidationException)
+            {
+                throw new CustomException("No puede dejar campo vacio!");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

@@ -9,23 +9,14 @@ using System.Threading.Tasks;
 
 namespace Lab.Capas.Logic
 {
-    public class EmployeeLogic
+    public class EmployeeLogic: BaseLogic, IEntity<Employees, string>
     {
-        private readonly NorthwindContext context;
-
-        #region Constructor
-        public EmployeeLogic()
-        {
-            this.context = new NorthwindContext();
-        }
-        #endregion
-
-        public List<Employees> GetEmployees()
+        public List<Employees> GetAll()
         {
             return context.Employees.ToList();
         }
 
-        public Employees GetEmployee(string nombre)
+        public Employees GetOne(string nombre)
         {
             try
             {
