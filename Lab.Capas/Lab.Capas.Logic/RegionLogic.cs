@@ -10,15 +10,15 @@ using System.Threading.Tasks;
 
 namespace Lab.Capas.Logic
 {
-    public class RegionLogic: BaseLogic, IEntity<Region, int>
+    public class RegionLogic: BaseLogic<Region, int>, IEntity<Region, int>
     {
 
-        public List<Region> GetAll()
+        public override List<Region> GetAll()
         {
             return context.Region.ToList();
         }
 
-        public Region GetOne(int id)
+        public override Region GetOne(int id)
         {
             try
             {
@@ -35,7 +35,7 @@ namespace Lab.Capas.Logic
 
         }
 
-        public void Insert(Region entity)
+        public override void Insert(Region entity)
         {
             try 
             {
@@ -52,7 +52,7 @@ namespace Lab.Capas.Logic
             
         }
 
-        public void Delete(int id)
+        public override void Delete(int id)
         {
             try
             {
@@ -65,7 +65,7 @@ namespace Lab.Capas.Logic
             }
         }
 
-        public void Update(Region entity)
+        public override void Update(Region entity)
         {
             try
             {

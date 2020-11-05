@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace Lab.Capas.Logic
 {
-    interface IEntity<T, in P>
+    interface IEntity<T, K>
     {
         List<T> GetAll();
 
-        T GetOne(P clave);
+        T GetOne(K clave);
+
+        void Insert(T entity);
+
+        void Delete(K clave);
+
+        void Update(T entity);
+
+
     }
 }

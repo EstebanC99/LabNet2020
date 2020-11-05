@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 namespace Lab.Capas.Logic
 {
  
-    public class TerritoriesLogic: BaseLogic, IEntity<Territories, string>
+    public class TerritoriesLogic: BaseLogic<Territories, string>, IEntity<Territories, string>
     {
-        public List<Territories> GetAll()
+        public override List<Territories> GetAll()
         {
             return context.Territories.ToList();
         }
@@ -34,7 +34,7 @@ namespace Lab.Capas.Logic
             }
         }
 
-        public Territories GetOne(string key)
+        public override Territories GetOne(string key)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace Lab.Capas.Logic
             }
         }
 
-        public void Insert(Territories entity)
+        public override void Insert(Territories entity)
         {
             try { 
                 context.Territories.Add(entity);
@@ -63,7 +63,7 @@ namespace Lab.Capas.Logic
         }
 
 
-        public void Delete(string key)
+        public override void Delete(string key)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Lab.Capas.Logic
             }
         }
 
-        public void Update(Territories entity)
+        public override void Update(Territories entity)
         {
             try
             {

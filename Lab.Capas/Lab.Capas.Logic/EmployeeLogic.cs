@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace Lab.Capas.Logic
 {
-    public class EmployeeLogic: BaseLogic, IEntity<Employees, string>
+    public class EmployeeLogic: BaseLogic<Employees, string>, IEntity<Employees, string>
     {
-        public List<Employees> GetAll()
+        public override List<Employees> GetAll()
         {
             return context.Employees.ToList();
         }
 
-        public Employees GetOne(string nombre)
+        public override Employees GetOne(string nombre)
         {
             try
             {
@@ -30,6 +30,21 @@ namespace Lab.Capas.Logic
             {
                 throw new CustomException();
             }
+        }
+
+        public override void Insert(Employees entity)
+        {
+
+        }
+
+        public override void Delete(string key)
+        {
+
+        }
+
+        public override void Update(Employees entity)
+        {
+
         }
 
     }

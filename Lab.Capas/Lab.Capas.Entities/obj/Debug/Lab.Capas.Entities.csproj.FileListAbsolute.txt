@@ -10,3 +10,15 @@ F:\GitRepositorios\LabNet2020\Lab.Capas\Lab.Capas.Entities\obj\Debug\Lab.Capas.E
 F:\GitRepositorios\LabNet2020\Lab.Capas\Lab.Capas.Entities\obj\Debug\Lab.Capas.Entities.csproj.CopyComplete
 F:\GitRepositorios\LabNet2020\Lab.Capas\Lab.Capas.Entities\obj\Debug\Lab.Capas.Entities.dll
 F:\GitRepositorios\LabNet2020\Lab.Capas\Lab.Capas.Entities\obj\Debug\Lab.Capas.Entities.pdb
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\bin\Debug\Lab.Capas.Entities.dll.config
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\bin\Debug\Lab.Capas.Entities.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\bin\Debug\Lab.Capas.Entities.pdb
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\obj\Debug\Lab.Capas.Entities.csprojAssemblyReference.cache
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\obj\Debug\Lab.Capas.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\obj\Debug\Lab.Capas.Entities.csproj.CopyComplete
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\obj\Debug\Lab.Capas.Entities.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab.Capas\Lab.Capas.Entities\obj\Debug\Lab.Capas.Entities.pdb
