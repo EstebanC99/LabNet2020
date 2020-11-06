@@ -48,12 +48,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DepartmentsLogic.cs" />
+    <Compile Include="EmployeesLogic.cs" />
+    <Compile Include="EntitiesLogic.cs" />
+    <Compile Include="JobsLogic.cs" />
+    <Compile Include="LocationsLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PruebaMock.Data\PruebaMock.Data.csproj">
+      <Project>{4C1A8797-E5DA-4CB1-8D8D-15050B78D705}</Project>
+      <Name>PruebaMock.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PruebaMock.Entities\PruebaMock.Entities.csproj">
+      <Project>{97BBB49B-F5F6-4014-BD26-7760567110A0}</Project>
+      <Name>PruebaMock.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

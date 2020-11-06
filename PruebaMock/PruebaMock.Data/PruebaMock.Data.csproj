@@ -57,5 +57,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PruebaMock.Entities\PruebaMock.Entities.csproj">
+      <Project>{97BBB49B-F5F6-4014-BD26-7760567110A0}</Project>
+      <Name>PruebaMock.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

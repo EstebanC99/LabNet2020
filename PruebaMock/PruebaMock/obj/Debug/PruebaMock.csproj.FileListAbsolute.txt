@@ -1,0 +1,12 @@
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\bin\Debug\PruebaMock.exe.config
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\bin\Debug\PruebaMock.exe
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\bin\Debug\PruebaMock.pdb
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\bin\Debug\EntityFramework.dll
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\bin\Debug\EntityFramework.SqlServer.dll
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\bin\Debug\EntityFramework.xml
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\bin\Debug\EntityFramework.SqlServer.xml
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\obj\Debug\PruebaMock.csprojAssemblyReference.cache
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\obj\Debug\PruebaMock.csproj.CoreCompileInputs.cache
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\obj\Debug\PruebaMock.csproj.CopyComplete
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\obj\Debug\PruebaMock.exe
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock\obj\Debug\PruebaMock.pdb

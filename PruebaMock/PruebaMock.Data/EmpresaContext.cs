@@ -4,6 +4,7 @@ namespace PruebaMock.Data
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using PruebaMock.Entities;
 
     public partial class EmpresaContext : DbContext
     {

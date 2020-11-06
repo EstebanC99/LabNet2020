@@ -1,0 +1,20 @@
+﻿using PruebaMock.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PruebaMock.Logic
+{
+    public abstract class EntitiesLogic
+    {
+        internal EmpresaContext context;
+
+        public EntitiesLogic()
+        {
+            this.context = new EmpresaContext();
+        }
+
+    }
+}

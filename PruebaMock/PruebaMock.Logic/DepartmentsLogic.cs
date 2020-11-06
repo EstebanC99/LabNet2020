@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PruebaMock.Logic
 {
-    public class Class1
+    public class DepartmentsLogic: EntitiesLogic
     {
     }
 }
