@@ -10,3 +10,9 @@ F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Logic\obj\Debug\PruebaMock.L
 F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Logic\obj\Debug\PruebaMock.Logic.csproj.CopyComplete
 F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Logic\obj\Debug\PruebaMock.Logic.dll
 F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Logic\obj\Debug\PruebaMock.Logic.pdb
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Logic\bin\Debug\PruebaMock.Data.dll
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Logic\bin\Debug\PruebaMock.Entities.dll
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Logic\bin\Debug\PruebaMock.Data.pdb
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Logic\bin\Debug\PruebaMock.Data.dll.config
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Logic\bin\Debug\PruebaMock.Entities.pdb
+F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Logic\bin\Debug\PruebaMock.Entities.dll.config
