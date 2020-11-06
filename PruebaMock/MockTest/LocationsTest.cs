@@ -22,6 +22,19 @@ namespace MockTest
             mockContext = new Mock<EmpresaContext>();
         }
 
+        private void LoadfakeData()
+        {
+            var fakeData = new List<LOCATIONS>
+            {
+                new LOCATIONS {ID = 1},
+                new LOCATIONS {ID = 2},
+                new LOCATIONS {ID = 3}
+            }.AsQueryable();
+            mockSet.As<IQueryable<LOCATIONS>>().Setup(m => m.Provider).Returns(fakeData.Provider);
+            mockSet.As<IQueryable<LOCATIONS>>().Setup(m => m.Expression).Returns(fakeData.Expression);
+            mockSet.As<IQueryable<LOCATIONS>>().Setup(m => m.ElementType).Returns(fakeData.ElementType);
+            mockSet.As<IQueryable<LOCATIONS>>().Setup(m => m.GetEnumerator()).Returns(fakeData.GetEnumerator());
+        }
 
         [TestMethod]
         public void CreatesLocations_SaveValidLocation()
@@ -30,7 +43,7 @@ namespace MockTest
             mockContext.Setup(m => m.LOCATIONS).Returns(mockSet.Object);
             var newLocation = new LOCATIONS
             {
-                ID = 5
+                ID = 1
             };
 
             // ACT
@@ -66,20 +79,42 @@ namespace MockTest
         public void GetAllLocations_Valid()
         {
             // ARRANGE
-            mockContext.Setup(m => m.LOCATIONS).Returns(mockSet.Object);
-            var data = new List<LOCATIONS>
-            {
-                new LOCATIONS {ID = 1},
-                new LOCATIONS {ID = 2},
-                new LOCATIONS {ID = 3}
-            }.AsQueryable();
-            var locationLogic = new LocationsLogic(mockContext.Object);
+            // Carga los datos de prueba
+            LoadfakeData();
 
-            //ACT
-            var locations = locationLogic.GetAll();
+            mockContext.Setup(c => c.LOCATIONS).Returns(mockSet.Object);
+            var location = new LocationsLogic(mockContext.Object);
 
-            // ASSERT
-            Assert.Equals(3, locations.Count);
+            // ACT AND ASSERT
+            Assert.AreEqual(3, location.GetAll().Count);
+        }
+
+        [TestMethod]
+        public void GetOneLocations_Valid()
+        {
+            // ARRANGE
+            LoadfakeData();
+            int idExpected = 2;
+            mockContext.Setup(c => c.LOCATIONS).Returns(mockSet.Object);
+            var location = new LocationsLogic(mockContext.Object);
+
+            // ACT AND ASSERT
+            Assert.AreEqual(idExpected, location.GetOne(2).ID);
+
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void GetOneLocations_Failed()
+        {
+            // ARRANGE
+            LoadfakeData();
+            mockContext.Setup(c => c.LOCATIONS).Returns(mockSet.Object);
+            var location = new LocationsLogic(mockContext.Object);
+
+            // ACT AND ASSERT
+            location.GetOne(0);
+
         }
     }
 }

@@ -25,7 +25,15 @@ namespace PruebaMock.Logic
 
         public LOCATIONS GetOne(int key)
         {
-            return context.LOCATIONS.FirstOrDefault(e => e.ID == key);
+            try
+            {
+                return context.LOCATIONS.First(e => e.ID == key);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw ex;
+            }
+
         }
 
         public void Insert(LOCATIONS entity)

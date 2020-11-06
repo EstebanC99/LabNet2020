@@ -57,5 +57,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PruebaMock.Entities\PruebaMock.Entities.csproj">
+      <Project>{97BBB49B-F5F6-4014-BD26-7760567110A0}</Project>
+      <Name>PruebaMock.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PruebaMock.Logic\PruebaMock.Logic.csproj">
+      <Project>{91468DAE-BAB2-4D66-BEC6-D90A2F1C2A7B}</Project>
+      <Name>PruebaMock.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
