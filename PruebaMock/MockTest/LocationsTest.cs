@@ -7,6 +7,7 @@ using PruebaMock.Logic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using PruebaMock.Logic.CustomExceptions;
 
 namespace MockTest
 {
@@ -58,7 +59,7 @@ namespace MockTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(InvalidIdException))]
         public void CreatesLocations_NullIdLocation()
         {
             // ARRANGE
@@ -74,7 +75,25 @@ namespace MockTest
 
         }
 
-        //Este todavia no funciona
+
+        //ESTE NO ME ANDA
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void CreatesLocations_ExistentIdLocation()
+        {
+            //ARRANGE 
+            LoadfakeData();
+            mockContext.Setup(c => c.LOCATIONS).Returns(mockSet.Object);
+            var locationLogic = new LocationsLogic(mockContext.Object);
+
+
+            //ACT 
+            locationLogic.Insert(new LOCATIONS { ID = 1});
+
+
+            //ASSERT MANEJADO POR LA EXCEPCION
+        }
+
         [TestMethod]
         public void GetAllLocations_Valid()
         {
@@ -104,7 +123,7 @@ namespace MockTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [ExpectedException(typeof(InvalidIdException))]
         public void GetOneLocations_Failed()
         {
             // ARRANGE

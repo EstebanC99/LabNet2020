@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomExceptions\InvalidIdException.cs" />
     <Compile Include="DepartmentsLogic.cs" />
     <Compile Include="EmployeesLogic.cs" />
     <Compile Include="EntitiesLogic.cs" />

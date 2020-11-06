@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PruebaMock.Logic.CustomExceptions;
 
 namespace PruebaMock.Logic
 {
@@ -29,9 +30,9 @@ namespace PruebaMock.Logic
             {
                 return context.LOCATIONS.First(e => e.ID == key);
             }
-            catch (InvalidOperationException ex)
+            catch (InvalidOperationException)
             {
-                throw ex;
+                throw new InvalidIdException("No pudo encontrarse la localidad con el ID indicado");
             }
 
         }
@@ -51,7 +52,7 @@ namespace PruebaMock.Logic
                 }
             } else
             {
-                throw new Exception();
+                throw new InvalidIdException();
             }
             
             

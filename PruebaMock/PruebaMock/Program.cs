@@ -13,10 +13,8 @@ namespace PruebaMock
         static void Main(string[] args)
         {
             var locationsLogic = new LocationsLogic();
-            foreach (LOCATIONS l in locationsLogic.GetAll())
-            {
-                Console.WriteLine(l.ID);
-            }
+            var newLocation = new LOCATIONS() { ID = 1 };
+            locationsLogic.Insert(newLocation);
             Console.ReadKey();
         }
     }

@@ -10,3 +10,15 @@ F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Entities\obj\Debug\PruebaMoc
 F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Entities\obj\Debug\PruebaMock.Entities.csproj.CopyComplete
 F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Entities\obj\Debug\PruebaMock.Entities.dll
 F:\GitRepositorios\LabNet2020\PruebaMock\PruebaMock.Entities\obj\Debug\PruebaMock.Entities.pdb
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\bin\Debug\PruebaMock.Entities.dll.config
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\bin\Debug\PruebaMock.Entities.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\bin\Debug\PruebaMock.Entities.pdb
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\obj\Debug\PruebaMock.Entities.csprojAssemblyReference.cache
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\obj\Debug\PruebaMock.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\obj\Debug\PruebaMock.Entities.csproj.CopyComplete
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\obj\Debug\PruebaMock.Entities.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\PruebaMock\PruebaMock.Entities\obj\Debug\PruebaMock.Entities.pdb
