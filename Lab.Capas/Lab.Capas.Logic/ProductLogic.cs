@@ -1,5 +1,4 @@
-﻿using Lab.Capas.Data;
-using Lab.Capas.Entities;
+﻿using Lab.Capas.Entities;
 using Lab.Capas.Logic.Exceptions;
 using System;
 using System.Collections.Generic;
@@ -10,24 +9,22 @@ using System.Threading.Tasks;
 
 namespace Lab.Capas.Logic
 {
-    public class RegionLogic: BaseLogic<Region, int>, IEntity<Region, int>
+    public class ProductLogic: BaseLogic<Products, int>, IEntity<Products, int>
     {
-
-        public override List<Region> GetAll()
+        public override List<Products> GetAll()
         {
-            return context.Region.ToList();
-            
+           return context.Products.ToList();
         }
 
-        public override Region GetOne(int id)
+        public override Products GetOne(int id)
         {
             try
             {
-                return context.Region.First(r => r.RegionID.Equals(id));
+                return context.Products.First(r => r.ProductID.Equals(id));
             }
             catch (InvalidOperationException)
             {
-                throw new CustomException("No existe la region deseada");
+                throw new CustomException("No existe la Products deseada");
             }
             catch (Exception)
             {
@@ -36,28 +33,28 @@ namespace Lab.Capas.Logic
 
         }
 
-        public override void Insert(Region entity)
+        public override void Insert(Products entity)
         {
-            try 
+            try
             {
-                entity.RegionID = (from r in context.Region
-                                        orderby r.RegionID descending
-                                        select r.RegionID).FirstOrDefault() +1;
-                context.Region.Add(entity);
+                entity.ProductID = (from r in context.Products
+                                   orderby r.ProductID descending
+                                   select r.ProductID).FirstOrDefault() + 1;
+                context.Products.Add(entity);
                 context.SaveChanges();
             }
             catch (Exception)
             {
                 throw new CustomException();
             }
-            
+
         }
 
         public override void Delete(int id)
         {
             try
             {
-                context.Region.Remove(context.Region.Find(id));
+                context.Products.Remove(context.Products.Find(id));
                 context.SaveChanges();
             }
             catch (Exception)
@@ -66,7 +63,7 @@ namespace Lab.Capas.Logic
             }
         }
 
-        public override void Update(Region entity)
+        public override void Update(Products entity)
         {
             try
             {
