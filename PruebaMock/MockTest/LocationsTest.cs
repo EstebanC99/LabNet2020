@@ -91,7 +91,6 @@ namespace MockTest
             locationLogic.Insert(new LOCATIONS { ID = 1});
 
 
-            //ASSERT MANEJADO POR LA EXCEPCION
         }
 
         [TestMethod]
