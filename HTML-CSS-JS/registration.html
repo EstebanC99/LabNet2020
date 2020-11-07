@@ -1,10 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<body>
+    <div id=containerPrincipal>
+
+        <form id="Registro">
+
+            <h1>Registro</h1>
+
+            <div class="inputContainer" id="firstInputContainer">
+                <i class="material-icons">face</i>
+                <input type="text" class="PersonalInput" id="FirtNameInput" placeholder="Nombre">
+            </div>
+            <div class="inputContainer">
+                <i class="material-icons">account_box</i>
+                <input type="text" class="PersonalInput" id="LastNameInput" placeholder="Apellido">
+            </div>
+            <div class="inputContainer">
+                <i class="material-icons">plus_one</i>
+                <input type="number" class="PersonalInput" id="AgeInput" placeholder="Edad">
+            </div>
+
+            <div class="containerGender">
+                <input type="radio" class="RadioGender" id="Male" name="gender" value="Male">
+                <label for="Male">
+                    Masculino
+                </label>
+                <br>
+                <input type="radio" class="RadioGender" id="Female" name="gender" value="Female">
+                <label for="Female">
+                    Femenino
+                </label>
+                <br>
+                <input type="radio" class="RadioGender" id="Other" name="gender" value="Other">
+                <label for="Other">
+                    Other
+                </label>
+                <br>
+            </div>
+
+
+            <div class="containerButtons">
+                <input type="button" id="submit" name="submit" value="Guardar">
+                <input type="button" id="cancel" name="cancel" value="Cancelar">
+            </div>
+
+
+        </form>
 
 
 
 
-    <body>
-        
-    </body>
+
+    </div>
+</body>
+
 </html>
