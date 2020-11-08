@@ -12,6 +12,8 @@ h1{
     color: #455A64;
 }
 
+
+
 label{
     margin-right: 20px;
     margin-left: 5px;
@@ -124,7 +126,33 @@ label{
 
 
 .PersonalInput:hover{
-    border:1px solid #00BCD4;
+    border:1px solid #00BCD4 !important;
+}
+
+
+input[type="button"]{
+    width: 30%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit{
+    background-color: #00BCD4;
+}
+
+#submit:hover{
+    background-color: #026674;
+}
+
+#cancel{
+    background-color: #aa2b2b;
+}
+#cancel:hover{
+    background-color: #521515;
 }
 
 

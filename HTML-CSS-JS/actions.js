@@ -5,7 +5,26 @@ $(document).ready(function(){
         }else {
             ChangeColor($(this), false);
         }
+    });
+
+    $("#submit").click(function(){
+        if (ValidateFields()){
+            var nombreYApellido = $("#firstName").val() + ", " + $("#lastName").val();
+            var edad = $("#age").val();
+            var genero = $("input:radio[name=gender]:checked").val();
+            alert("Registro exitoso \rNombre y apellido: " + nombreYApellido + "\rEdad: "+ edad + "\rGenero: " + genero);
+            ClearEverything();
+        }else{
+            alert("CAMPOS INCOMPLETOS!!");
+        };
+    });
+
+    $("#cancel").click(function(){
+        ClearEverything();
+        alert("REGISTRO CANCELADO");
     })
+
+
 });
 
 function ChangeColor(element, valido){
@@ -15,4 +34,43 @@ function ChangeColor(element, valido){
         element.css("border-bottom", "1px solid rgba(255, 0, 0, 0.6)");
     }
 
+}
+
+
+function ValidateNombre() {
+    if($("#firstName").val().length < 2){
+        ChangeColor($("#firstName"), false);
+        return false;
+    } else {
+        return true;
+    }
+}
+function ValidateApellido() {
+    if($("#lastName").val().length <2){
+        ChangeColor($("#lastName"), false);
+        return false;
+    } else {
+        return true;
+    }
+}
+function ValidateEdad() {
+    var edad = $("#age").val();
+    if( edad < 1 || edad >120){
+        ChangeColor($("#age"), false);
+        return false;
+    } else {
+        return true;
+    }
+}
+function ValidateGender() {
+    return $("input:radio[name=gender]").is(":checked");  
+}
+function ClearEverything() {
+    $("input:radio[name=gender]").attr(":checked", "false");
+    $(".PersonalInput").val("");
+}
+
+function ValidateFields () {
+    var available = (ValidateNombre() & ValidateApellido() & ValidateEdad() & ValidateGender())
+    return available;
 }
