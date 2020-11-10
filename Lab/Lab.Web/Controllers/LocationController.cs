@@ -27,31 +27,28 @@ namespace Lab.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Insert()
+        //LLAMA A LA VISTA DE UPDATE O INSERT, SETEANDO EL TITULO CORRESPONDIENTE
+        public ActionResult InsertUpdate(LocationModel entity, string accion)
         {
-            return View();
-        }
-
-        public ActionResult Update(LocationModel entity)
-        {
+            ViewBag.Title = accion;
             return View(entity);
         }
 
+        //EJECUTA METODO SI QUIERE ACTUALIZAR O AGREGAR
         [HttpPost]
-        public ActionResult UpdateLocation(LocationModel entity)
+        public ActionResult InsertOrUpdate(LocationModel entity)
         {
             LocationLogic location = new LocationLogic();
-            location.Update(new Entities.LOCATIONS() { ID = entity.Id, CITY = entity.City });
+            if (entity.Id != 0)
+            {
+                location.Update(new Entities.LOCATIONS() { ID = entity.Id, CITY = entity.City });
+            }   else
+            {
+                location.Insert(new Entities.LOCATIONS() { CITY = entity.City });
+            }
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public ActionResult InsertLocation(LocationModel newEntity)
-        {
-            LocationLogic location = new LocationLogic();
-            location.Insert(new Entities.LOCATIONS() { CITY = newEntity.City });
-            return RedirectToAction("Index");
-        }
 
     }
 }

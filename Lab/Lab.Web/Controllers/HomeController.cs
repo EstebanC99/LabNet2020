@@ -26,5 +26,10 @@ namespace Lab.Web.Controllers
 
             return View();
         }
+
+        public ActionResult Probando()
+        {
+            return View();
+        }
     }
 }

@@ -10,3 +10,15 @@ F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.csproj.Cor
 F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.csproj.CopyComplete
 F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.dll
 F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.pdb
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\bin\Debug\Lab.Entities.dll.config
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\bin\Debug\Lab.Entities.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\bin\Debug\Lab.Entities.pdb
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.csprojAssemblyReference.cache
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.csproj.CopyComplete
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.pdb

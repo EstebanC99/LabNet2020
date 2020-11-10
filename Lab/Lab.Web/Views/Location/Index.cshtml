@@ -21,11 +21,11 @@
                 <td>@l.Id</td>
                 <td>@l.City</td>
                 <td id="delete-action">@Html.ActionLink("Borrar","Delete", new { key = l.Id })</td>
-                <td id="update-action">@Html.ActionLink("Modificar", "Update", new { Id = l.Id, City = l.City})</td>
+                <td id="update-action">@Html.ActionLink("Modificar", "InsertUpdate", new { Id = l.Id, City = l.City, accion = "Modificar"})</td>
             </tr>
         }
         </tbody>
 </table>
-<p>@Html.ActionLink("Insertar","Insert","Location")</p>
+<p>@Html.ActionLink("Insertar","InsertUpdate", new { Id = 0, City = "", accion = "Insertar" })</p>
 
 
