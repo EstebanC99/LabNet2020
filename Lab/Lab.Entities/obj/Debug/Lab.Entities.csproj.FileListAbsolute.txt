@@ -1,0 +1,12 @@
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\Lab.Entities.dll.config
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\Lab.Entities.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\Lab.Entities.pdb
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\EntityFramework.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\EntityFramework.SqlServer.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\EntityFramework.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\EntityFramework.SqlServer.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.csprojAssemblyReference.cache
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.csproj.CoreCompileInputs.cache
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.csproj.CopyComplete
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.pdb

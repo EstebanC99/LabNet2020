@@ -1,0 +1,15 @@
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\Lab.Data.dll.config
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\Lab.Data.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\Lab.Data.pdb
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\EntityFramework.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\EntityFramework.SqlServer.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\Lab.Entities.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\Lab.Entities.pdb
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\Lab.Entities.dll.config
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\EntityFramework.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\EntityFramework.SqlServer.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\obj\Debug\Lab.Data.csprojAssemblyReference.cache
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\obj\Debug\Lab.Data.csproj.CoreCompileInputs.cache
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\obj\Debug\Lab.Data.csproj.CopyComplete
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\obj\Debug\Lab.Data.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\obj\Debug\Lab.Data.pdb

@@ -1,0 +1,17 @@
+﻿@model Lab.Web.Models.LocationModel
+
+@{
+    ViewBag.Title = "Actualizar";
+}
+
+<h2>@ViewBag.Title</h2>
+<div class="formulario">
+    @using (Html.BeginForm("UpdateLocation", "Location", FormMethod.Post))
+    {
+        <input type="number" hidden name="Id" value="@Model.Id"/>
+        <div>Ciudad: @Html.TextBoxFor(l => l.City, new { @class = "form-control" })</div>
+        <p>
+            <input type="submit" value="Guardar" name="Save" />
+        </p>
+    }
+</div>

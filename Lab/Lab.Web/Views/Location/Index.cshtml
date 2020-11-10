@@ -1,0 +1,31 @@
+﻿@model List<Lab.Web.Models.LocationModel>
+
+@{
+    ViewBag.Title = "Ubicaciones";
+}
+
+<h2>@ViewBag.Title</h2>
+<table class="table"><caption>Ubicaciones</caption>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ciudad</th>
+            <th colspan="2">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var l in Model)
+        {
+            <tr>
+
+                <td>@l.Id</td>
+                <td>@l.City</td>
+                <td id="delete-action">@Html.ActionLink("Borrar","Delete", new { key = l.Id })</td>
+                <td id="update-action">@Html.ActionLink("Modificar", "Update", new { Id = l.Id, City = l.City})</td>
+            </tr>
+        }
+        </tbody>
+</table>
+<p>@Html.ActionLink("Insertar","Insert","Location")</p>
+
+
