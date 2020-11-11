@@ -14,11 +14,19 @@ namespace Lab.Web.Controllers
         // GET: Location
         public ActionResult Index()
         {
-            LocationLogic location = new LocationLogic();
-            List<LocationModel> locations = (from l in location.GetAll()
-                                            select new LocationModel { Id = l.ID, City = l.CITY }).ToList();
+            try
+            {
+                LocationLogic location = new LocationLogic();
+                List<LocationModel> locations = (from l in location.GetAll()
+                                                 select new LocationModel { Id = l.ID, City = l.CITY }).ToList();
 
-            return View(locations);
+                return View(locations);
+            }
+            catch (EmptyDbException ex)
+            {
+                TempData["Error"] = ex.Message;
+                return RedirectToAction("Error");
+            }
         }
 
         public ActionResult Delete(int key)

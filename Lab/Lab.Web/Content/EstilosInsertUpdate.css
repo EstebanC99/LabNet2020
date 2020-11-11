@@ -26,9 +26,9 @@ div.interno#interno-texto {
     padding: 20px;
 }
 
-.city-text{
-    display:inline-block;
-    width: 75%;
+.city-text {
+        display: inline-block;
+        width: 75%;
 }
 
 input[type='submit'] {

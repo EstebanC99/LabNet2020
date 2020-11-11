@@ -1,6 +1,8 @@
 ﻿@model Lab.Web.Models.LocationModel
 
 <link rel="stylesheet" type="text/css" href="~/Content/EstilosInsertUpdate.css" media="screen" />
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="~/Scripts/InsertUpdate.js"></script>
 
 <h2>@ViewBag.Title</h2>
 
@@ -9,12 +11,24 @@
         @using (Html.BeginForm("InsertOrUpdate", "Location", FormMethod.Post))
         {
             @Html.HiddenFor(l => l.Id)
-            <div class="interno" id="interno-texto">Ciudad: @Html.TextBoxFor(l => l.City, new { @class = "city-text" })</div>
+            @Html.HiddenFor(l=> l.City, new { @id="city-label"})
+
+        <div class="interno" id="interno-texto">
+            <label for="city-text">Ciudad:</label>
+            <input type="text" name="City" value = "@Model.City" placeholder="Nombre de la ciudad..." id="city-text" />
+        </div>
             <p>
                 <input type="submit" value="Guardar" name="Save" />
-                <input type="reset" value="Cancelar" name="Abort" />
             </p>
-        }
+         }
+        <p>
+            <a href="@Url.Action("Index","Location")">
+                <input type="reset" value="Cancelar" name="Abort" />
+            </a>
+        </p>
+
+
+
     </div>
 
 </div>
