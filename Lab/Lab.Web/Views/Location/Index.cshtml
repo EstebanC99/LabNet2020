@@ -4,6 +4,8 @@
     ViewBag.Title = "Ubicaciones";
 }
 
+<link rel="stylesheet" type="text/css" href="~/Content/EstilosIndex.css" media="screen"/>
+
 <h2>@ViewBag.Title</h2>
 <table class="table"><caption>Ubicaciones</caption>
     <thead>
@@ -20,12 +22,16 @@
 
                 <td>@l.Id</td>
                 <td>@l.City</td>
-                <td id="delete-action">@Html.ActionLink("Borrar","Delete", new { key = l.Id })</td>
-                <td id="update-action">@Html.ActionLink("Modificar", "InsertUpdate", new { Id = l.Id, City = l.City, accion = "Modificar"})</td>
+                <td class="Actions">@Html.ActionLink("Borrar","Delete", new { key = l.Id }, new { @id = "delete-action" })</td>
+                <td class="Acions">@Html.ActionLink("Modificar", "InsertUpdate", new { Id = l.Id, City = l.City, accion = "Modificar"}, new { @id = "update-action" })</td>
             </tr>
         }
         </tbody>
 </table>
-<p>@Html.ActionLink("Insertar","InsertUpdate", new { Id = 0, City = "", accion = "Insertar" })</p>
+<a href="@Url.Action("InsertUpdate","Location", new { Id = 0, City = "", accion = "Insertar" })">
+    <input type="submit" value="Insertar" id="insert-action"/>
+</a>
+
+
 
 

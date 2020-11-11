@@ -1,0 +1,38 @@
+﻿
+
+body {
+
+}
+
+table.table {
+    width: 50%;
+    padding:10px;
+}
+
+th {
+    font-size: 16px;
+    font-style: italic;
+}
+
+td.Actions{
+    width: 10px;
+}
+
+#delete-action {
+    color: #FF5252;
+}
+
+#update-action {
+    color: #388E3C
+}
+
+
+#insert-action {
+    background-color: #F5F5F5;
+    border: 1px solid #212121;
+    border-radius: 5px;
+}
+
+#insert-action:hover{
+    background-color: #757575;
+}

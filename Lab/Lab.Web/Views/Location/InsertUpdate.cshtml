@@ -1,16 +1,21 @@
 ﻿@model Lab.Web.Models.LocationModel
 
+<link rel="stylesheet" type="text/css" href="~/Content/EstilosInsertUpdate.css" media="screen" />
 
 <h2>@ViewBag.Title</h2>
 
 <div class="formulario">
-    @using (Html.BeginForm("InsertOrUpdate", "Location", FormMethod.Post))
-    {
-        @Html.HiddenFor(l => l.Id)
-        <div>Ciudad: @Html.TextBoxFor(l => l.City, new { @class = "form-control" })</div>
-        <p>
-            <input type="submit" value="Guardar" name="Save" />
-        </p>
-    }
+    <div class="interno">
+        @using (Html.BeginForm("InsertOrUpdate", "Location", FormMethod.Post))
+        {
+            @Html.HiddenFor(l => l.Id)
+            <div class="interno" id="interno-texto">Ciudad: @Html.TextBoxFor(l => l.City, new { @class = "city-text" })</div>
+            <p>
+                <input type="submit" value="Guardar" name="Save" />
+                <input type="reset" value="Cancelar" name="Abort" />
+            </p>
+        }
+    </div>
+
 </div>
 

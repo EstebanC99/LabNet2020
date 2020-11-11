@@ -1,0 +1,59 @@
+﻿body {
+    text-align:center;
+
+}
+
+
+.formulario{
+    display:inline-block;
+    width: 50%;
+    text-align:center;
+    font-family: Arial;
+}
+
+div.interno {
+    border: 2px solid #BDBDBD;
+    border-radius: 10px;
+    width: 50%;
+    display:inline-block;
+    text-align: center;
+}
+
+div.interno#interno-texto {
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+}
+
+.city-text{
+    display:inline-block;
+    width: 75%;
+}
+
+input[type='submit'] {
+    background-color: #F5F5F5;
+    border: 1px solid #212121;
+    border-radius: 5px;
+}
+
+input[type='submit']:hover {
+    background-color: #757575;
+}
+
+input[type='reset'] {
+    background-color: #F44336;
+    border: 1px solid #212121;
+    border-radius: 5px;
+    color:white;
+}
+
+input[type='reset']:hover {
+        background-color: #D32F2F;
+
+}
+
+h2 {
+    color: #757575;
+
+}

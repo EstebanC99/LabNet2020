@@ -49,6 +49,10 @@ namespace Lab.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Cancel()
+        {
+            return RedirectToAction("Index");
+        }
 
     }
 }

@@ -1,0 +1,55 @@
+﻿body {
+}
+
+* {
+    outline: none !important;
+}
+
+textarea:focus, input:focus {
+    outline: none !important;
+}
+
+a {
+    color: #757575;
+    font-family: arial;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    font-family: arial;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    font-family: arial;
+    text-decoration: none;
+}
+
+
+
+
+
+
+.div-category {
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+    height: auto;
+    border-radius: 5px;
+    text-decoration-color: black;
+}
+
+.div-category:hover {
+    border: 1px solid #757575;
+}
+
+img{
+    width:33%;
+    height: auto;
+}
+
+
+
+
