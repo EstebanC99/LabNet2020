@@ -52,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseLogic.cs" />
+    <Compile Include="Exceptions\DbErrorException.cs" />
+    <Compile Include="Exceptions\EmptyDbException.cs" />
+    <Compile Include="Exceptions\EntityNotFoundException.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="LocationLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

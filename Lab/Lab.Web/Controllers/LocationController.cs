@@ -1,4 +1,5 @@
 ﻿using Lab.Logic;
+using Lab.Logic.Exceptions;
 using Lab.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -22,9 +23,17 @@ namespace Lab.Web.Controllers
 
         public ActionResult Delete(int key)
         {
-            LocationLogic location = new LocationLogic();
-            location.Delete(key);
-            return RedirectToAction("Index");
+            try
+            {
+                LocationLogic location = new LocationLogic();
+                location.Delete(key);
+                return RedirectToAction("Index");
+            } catch (Exception ex)
+            {
+                TempData["Error"] = ex.Message;
+                return RedirectToAction("Error");
+            }
+
         }
 
         //LLAMA A LA VISTA DE UPDATE O INSERT, SETEANDO EL TITULO CORRESPONDIENTE
@@ -39,14 +48,23 @@ namespace Lab.Web.Controllers
         public ActionResult InsertOrUpdate(LocationModel entity)
         {
             LocationLogic location = new LocationLogic();
-            if (entity.Id != 0)
+            try
             {
-                location.Update(new Entities.LOCATIONS() { ID = entity.Id, CITY = entity.City });
-            }   else
+                if (entity.Id != 0)
+                {
+                    location.Update(new Entities.LOCATIONS() { ID = entity.Id, CITY = entity.City });
+                }
+                else
+                {
+                    location.Insert(new Entities.LOCATIONS() { CITY = entity.City });
+                }
+                return RedirectToAction("Index");
+            } catch (DbErrorException ex)
             {
-                location.Insert(new Entities.LOCATIONS() { CITY = entity.City });
+                TempData["Error"] = ex.Message;
+                return RedirectToAction("Error");
             }
-            return RedirectToAction("Index");
+            
         }
 
         public ActionResult Cancel()
@@ -54,5 +72,9 @@ namespace Lab.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Error()
+        {
+            return View(TempData["Error"]);
+        }
     }
 }
