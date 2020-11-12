@@ -19,7 +19,6 @@ namespace Lab.Web.Controllers
                 LocationLogic location = new LocationLogic();
                 List<LocationModel> locations = (from l in location.GetAll()
                                                  select new LocationModel { Id = l.ID, City = l.CITY }).ToList();
-
                 return View(locations);
             }
             catch (EmptyDbException ex)
@@ -45,34 +44,39 @@ namespace Lab.Web.Controllers
         }
 
         //LLAMA A LA VISTA DE UPDATE O INSERT, SETEANDO EL TITULO CORRESPONDIENTE
+        [HttpGet]
         public ActionResult InsertUpdate(LocationModel entity, string accion)
         {
-            ViewBag.Title = accion;
+            Session["Title"] = accion;
             return View(entity);
         }
 
         //EJECUTA METODO SI QUIERE ACTUALIZAR O AGREGAR
         [HttpPost]
-        public ActionResult InsertOrUpdate(LocationModel entity)
+        public ActionResult InsertUpdate(LocationModel entity)
         {
-            LocationLogic location = new LocationLogic();
-            try
+            if (ModelState.IsValid)
             {
-                if (entity.Id != 0)
+                LocationLogic location = new LocationLogic();
+                try
                 {
-                    location.Update(new Entities.LOCATIONS() { ID = entity.Id, CITY = entity.City });
+                    if (entity.Id != 0)
+                    {
+                        location.Update(new Entities.LOCATIONS() { ID = entity.Id, CITY = entity.City });
+                    }
+                    else
+                    {
+                        location.Insert(new Entities.LOCATIONS() { CITY = entity.City });
+                    }
+                    return RedirectToAction("Index");
                 }
-                else
+                catch (DbErrorException ex)
                 {
-                    location.Insert(new Entities.LOCATIONS() { CITY = entity.City });
+                    TempData["Error"] = ex.Message;
+                    return RedirectToAction("Error");
                 }
-                return RedirectToAction("Index");
-            } catch (DbErrorException ex)
-            {
-                TempData["Error"] = ex.Message;
-                return RedirectToAction("Error");
             }
-            
+            return View();           
         }
 
         public ActionResult Cancel()

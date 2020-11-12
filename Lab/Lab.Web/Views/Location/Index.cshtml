@@ -4,7 +4,15 @@
     ViewBag.Title = "Ubicaciones";
 }
 
-<link rel="stylesheet" type="text/css" href="~/Content/EstilosIndex.css" media="screen"/>
+<!--SCRIPTS-->
+<script type="text/javascript" src="~/Scripts/Index.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/alertify.min.js"></script>
+
+<!--STYLES-->
+<link rel="stylesheet" type="text/css" href="~/Content/EstilosIndex.css" media="screen" />
+<link rel="stylesheet" href="~/Content/alertifyjs/alertify.min.css" />
+<link rel="stylesheet" href="~/Content/alertifyjs/themes/default.min.css" />
 
 <h2>@ViewBag.Title</h2>
 <table class="table"><caption>Ubicaciones</caption>
@@ -17,13 +25,13 @@
     </thead>
     <tbody>
        @foreach (var l in Model)
-        {
+       {
             <tr>
 
                 <td>@l.Id</td>
-                <td>@l.City</td>
-                <td class="Actions">@Html.ActionLink("Borrar","Delete", new { key = l.Id }, new { @id = "delete-action" })</td>
-                <td class="Acions">@Html.ActionLink("Modificar", "InsertUpdate", new { Id = l.Id, City = l.City, accion = "Modificar"}, new { @id = "update-action" })</td>
+                <td id="ciudad">@l.City</td>
+                <td class="Actions">@Html.ActionLink("Borrar", "Delete", new { key = l.Id }, new { @id = "delete-action", onclick = "return myConfirm();"})</td>
+                <td class="Actions">@Html.ActionLink("Modificar", "InsertUpdate", new { Id = l.Id, City = l.City, accion = "Modificar"}, new { @id = "update-action" })</td>
             </tr>
         }
         </tbody>

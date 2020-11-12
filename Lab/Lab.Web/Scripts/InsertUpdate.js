@@ -1,12 +1,14 @@
 ﻿$(document).ready(function () {
-    $("#city-text").val($("#city-label").val())
-    $("#city-text").change(function () {
+    $("#cityText").change(function () {
         if ($(this).val().length < 2) {
-            $(this).css("border-color", "red");
+            $(this).css({
+                "border-color": "red",
+                "border-width": "1px"});
         } else {
             $(this).css("border-color", "blue");
         }
-        $("#city-label").val($(this).val());
     })
+    
+
 });
 

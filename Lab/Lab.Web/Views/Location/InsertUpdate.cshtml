@@ -2,21 +2,22 @@
 
 <link rel="stylesheet" type="text/css" href="~/Content/EstilosInsertUpdate.css" media="screen" />
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
 <script type="text/javascript" src="~/Scripts/InsertUpdate.js"></script>
 
-<h2>@ViewBag.Title</h2>
+<h2>@Session["Title"]</h2>
 
 <div class="formulario">
     <div class="interno">
-        @using (Html.BeginForm("InsertOrUpdate", "Location", FormMethod.Post))
+        @using (Html.BeginForm("InsertUpdate", "Location", FormMethod.Post, new { @id = "form-insert" }))
         {
-            @Html.HiddenFor(l => l.Id)
-            @Html.HiddenFor(l=> l.City, new { @id="city-label"})
+            @Html.HiddenFor(l => l.Id) 
 
-        <div class="interno" id="interno-texto">
-            <label for="city-text">Ciudad:</label>
-            <input type="text" name="City" value = "@Model.City" placeholder="Nombre de la ciudad..." id="city-text" />
-        </div>
+            <div class="interno" id="interno-texto">
+                @Html.Label("Ciudad:")
+                @Html.TextBoxFor(l => l.City, new { @id = "cityText" })
+                @Html.ValidationMessageFor(l => l.City, "", new { @class = "text-danger" })
+            </div>
             <p>
                 <input type="submit" value="Guardar" name="Save" />
             </p>

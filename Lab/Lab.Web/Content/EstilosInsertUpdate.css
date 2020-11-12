@@ -26,9 +26,9 @@ div.interno#interno-texto {
     padding: 20px;
 }
 
-.city-text {
-        display: inline-block;
-        width: 75%;
+#cityText {
+    border-width: 1px;
+    border-radius: 10px;
 }
 
 input[type='submit'] {
@@ -55,5 +55,9 @@ input[type='reset']:hover {
 
 h2 {
     color: #757575;
+}
 
+.text-danger{
+    color: red;
+    text-align: center;
 }
