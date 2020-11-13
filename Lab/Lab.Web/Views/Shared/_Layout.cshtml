@@ -4,13 +4,15 @@
     <!--JS-->
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/alertify.min.js"></script>
-    <script>
-        function usuario() {
-            event.preventDefault();
-            alertify.success("Logeado con exito");
-            return false;
-        }
-    </script>
+    @if ((string)Session["User"] != "")
+    {
+        <script>
+            function usuario() {
+                alertify.success("Logeado con exito");
+            }
+        </script>
+    };
+
 
     <!--CSS-->
     <link rel="stylesheet" href="~/Content/alertifyjs/alertify.min.css" />
@@ -39,7 +41,7 @@
                     <li>@Html.ActionLink("Ubicaciones", "Index", "Location")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li style="text-align:left">@Html.ActionLink("Logueo", "LoadUser", "Shared", new { user = "Logeado"}, new { onclick = "return usuario();" })</li>
+                    <li style="text-align:right;">@Html.ActionLink("Logueo", "LoadUser", "Shared", new { user = "Logeado"}, new { onclick = "return usuario();" })</li>
                 </ul>
             </div>
         </div>
