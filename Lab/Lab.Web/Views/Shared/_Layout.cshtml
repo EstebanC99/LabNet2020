@@ -1,6 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <!--JS-->
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/alertify.min.js"></script>
+    <script>
+        function usuario() {
+            event.preventDefault();
+            alertify.success("Logeado con exito");
+            return false;
+        }
+    </script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="~/Content/alertifyjs/alertify.min.css" />
+    <link rel="stylesheet" href="~/Content/alertifyjs/themes/default.min.css" />
+
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
@@ -23,6 +39,7 @@
                     <li>@Html.ActionLink("Ubicaciones", "Index", "Location")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li style="text-align:left">@Html.ActionLink("Logueo", "LoadUser", "Shared", new { user = "Logeado"}, new { onclick = "return usuario();" })</li>
                 </ul>
             </div>
         </div>
@@ -31,7 +48,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - @Session["User"]</p>
         </footer>
     </div>
 

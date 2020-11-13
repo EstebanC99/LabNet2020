@@ -10,6 +10,10 @@ namespace Lab.Web.Controllers
     {
         public ActionResult Index()
         {
+            if ((string)Session["User"] == "")
+            {
+                Session["User"] = "Login";
+            }
             return View();
         }
 
