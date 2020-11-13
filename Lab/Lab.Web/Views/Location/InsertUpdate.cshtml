@@ -23,14 +23,14 @@
             <div class="interno" id="interno-texto">
                 @Html.Label("Ciudad:")
                 @Html.TextBoxFor(l => l.City, new { @id = "cityText" })
-                @Html.ValidationMessageFor(l => l.City, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(l => l.City, "Ingrese una ciudad", new { @class = "text-danger" })
             </div>
             <p>
                 <input type="submit" value="Guardar" name="Save" />
             </p>
         }
         <p>
-            <a href="@Url.Action("Index","Location", new { onclick = "return myConfirm()"})">
+            <a href="@Url.Action("Index","Location")">
                 <input type="reset" value="Cancelar" name="Abort" />
             </a>
         </p>

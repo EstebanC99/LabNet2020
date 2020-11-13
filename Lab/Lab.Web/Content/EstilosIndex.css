@@ -18,7 +18,7 @@ td.Actions{
     width: 10px;
 }
 
-#delete-action {
+.delete-action {
     color: #FF5252;
 }
 

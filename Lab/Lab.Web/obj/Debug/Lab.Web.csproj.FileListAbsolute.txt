@@ -182,3 +182,7 @@ C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Web\obj\Debug\Lab.Web.cspro
 C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Web\obj\Debug\Lab.Web.csproj.CopyComplete
 C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Web\obj\Debug\Lab.Web.dll
 C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Web\obj\Debug\Lab.Web.pdb
+F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\roslyn\System.Buffers.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\roslyn\System.Memory.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\roslyn\System.Numerics.Vectors.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll

@@ -2,14 +2,14 @@
     $("#cityText").change(function () {
 
         if ($(this).val().length < 2) {
-            $(this).css({
-                "border-color": "red",
+            $(this).fadeIn().css({
+                "border-color": "#F44336",
                 "border-width": "1px"
             });
-            $(".text-danger").show();
+            $(".text-danger").fadeIn().show();
         } else {
-            $(this).css("border-color", "lightgreen");
-            $(".text-danger").hide();
+            $(this).css("border-color", "#4CAF50");
+            $(".text-danger").fadeOut("slow");
         }
     });
 
