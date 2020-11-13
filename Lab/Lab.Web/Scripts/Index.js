@@ -1,15 +1,16 @@
 ﻿
 function myConfirm() {
     event.preventDefault();
-    var ciudad = $("#ciudad").val();
-    alertify.confirm("¿Realmente desea borrar la ciudad" + ciudad + "?",
+    alertify.confirm("¿Realmente desea borrar la ciudad?",
         function () {
-            alertify.success('Eliminado con exito');
+            alertify.success('Eliminado con exito')
             return true;
         },
         function () {
-            alertify.error('Cancelado');
+            alertify.error('Cancelado')
+            return true;
         });
+    return true;
 };
 
 

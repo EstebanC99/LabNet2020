@@ -1,9 +1,16 @@
 ﻿@model Lab.Web.Models.LocationModel
 
-<link rel="stylesheet" type="text/css" href="~/Content/EstilosInsertUpdate.css" media="screen" />
+<!--JS-->
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 <script src="~/Scripts/jquery.validate.js"></script>
 <script type="text/javascript" src="~/Scripts/InsertUpdate.js"></script>
+<script src="~/Scripts/alertify.min.js"></script>
+
+<!--CSS-->
+<link rel="stylesheet" type="text/css" href="~/Content/EstilosInsertUpdate.css" media="screen" />
+<link rel="stylesheet" href="~/Content/alertifyjs/alertify.min.css" />
+<link rel="stylesheet" href="~/Content/alertifyjs/themes/default.min.css" />
+
 
 <h2>@Session["Title"]</h2>
 
@@ -11,7 +18,7 @@
     <div class="interno">
         @using (Html.BeginForm("InsertUpdate", "Location", FormMethod.Post, new { @id = "form-insert" }))
         {
-            @Html.HiddenFor(l => l.Id) 
+            @Html.HiddenFor(l => l.Id)
 
             <div class="interno" id="interno-texto">
                 @Html.Label("Ciudad:")
@@ -21,9 +28,9 @@
             <p>
                 <input type="submit" value="Guardar" name="Save" />
             </p>
-         }
+        }
         <p>
-            <a href="@Url.Action("Index","Location")">
+            <a href="@Url.Action("Index","Location", new { onclick = "return myConfirm()"})">
                 <input type="reset" value="Cancelar" name="Abort" />
             </a>
         </p>
