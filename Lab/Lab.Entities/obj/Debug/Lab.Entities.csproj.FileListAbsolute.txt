@@ -22,3 +22,11 @@ C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Enti
 C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.csproj.CopyComplete
 C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.dll
 C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Entities\obj\Debug\Lab.Entities.pdb
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\Newtonsoft.Json.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\System.Net.Http.Formatting.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\System.Web.Http.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\System.Web.Http.WebHost.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\Newtonsoft.Json.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\System.Net.Http.Formatting.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\System.Web.Http.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Entities\bin\Debug\System.Web.Http.WebHost.xml

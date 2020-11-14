@@ -9,6 +9,7 @@
         <script>
             function usuario() {
                 alertify.success("Logeado con exito");
+                
             }
         </script>
     };
@@ -41,7 +42,7 @@
                     <li>@Html.ActionLink("Ubicaciones", "Index", "Location")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li style="text-align:right;">@Html.ActionLink("Logueo", "LoadUser", "Shared", new { user = "Logeado"}, new { onclick = "return usuario();" })</li>
+                    <li style="text-align:right;">@Html.ActionLink("Logueo", "LoadUser", "Shared", new { user = Session["title"]}, new { onclick = "return usuario();" })</li>
                 </ul>
             </div>
         </div>

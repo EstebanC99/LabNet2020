@@ -36,7 +36,6 @@ input[name='Save'] {
     border: 1px solid #212121;
     border-radius: 5px;
     font-family: Arial !important;
-    font-size: 24px ;
 }
 
 input[type='submit']:hover {

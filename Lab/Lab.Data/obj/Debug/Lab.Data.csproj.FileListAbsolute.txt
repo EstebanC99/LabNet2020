@@ -28,3 +28,11 @@ C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Data\obj\Debug\Lab.Data.csp
 C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Data\obj\Debug\Lab.Data.csproj.CopyComplete
 C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Data\obj\Debug\Lab.Data.dll
 C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Data\obj\Debug\Lab.Data.pdb
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\Newtonsoft.Json.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\System.Net.Http.Formatting.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\System.Web.Http.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\System.Web.Http.WebHost.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\Newtonsoft.Json.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\System.Net.Http.Formatting.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\System.Web.Http.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Data\bin\Debug\System.Web.Http.WebHost.xml

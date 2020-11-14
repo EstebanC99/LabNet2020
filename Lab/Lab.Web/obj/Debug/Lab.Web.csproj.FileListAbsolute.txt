@@ -186,3 +186,9 @@ F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\roslyn\System.Buffers.dll
 F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\roslyn\System.Memory.dll
 F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\roslyn\System.Numerics.Vectors.dll
 F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\System.Net.Http.Formatting.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\System.Web.Http.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\System.Web.Http.WebHost.dll
+F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\System.Net.Http.Formatting.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\System.Web.Http.xml
+F:\GitRepositorios\LabNet2020\Lab\Lab.Web\bin\System.Web.Http.WebHost.xml
