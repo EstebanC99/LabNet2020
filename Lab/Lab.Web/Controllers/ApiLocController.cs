@@ -1,5 +1,6 @@
 ﻿using Lab.Logic;
 using Lab.Web.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,5 +23,15 @@ namespace Lab.Web.Controllers
             });
             return Ok("Exito");
         }
+
+        [HttpGet]
+        public IHttpActionResult GetLocations()
+        {
+            LocationLogic location = new LocationLogic();
+            List<LocationModel> locations = (from l in location.GetAll()
+                                             select new LocationModel { Id = l.ID, City = l.CITY }).ToList();
+            return Ok(locations);
+        }
     }
+
 }

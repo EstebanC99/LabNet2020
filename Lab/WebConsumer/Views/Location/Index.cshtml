@@ -4,5 +4,17 @@
 }
 
 <h2>Index</h2>
+@using (Html.BeginForm("AddLoc", "Location", FormMethod.Post))
+{
+    <input type="text" id="textCity" placeholder="Nombre de ciudad..." name="city" />
+    <input type="submit" />
+}
+@using (Html.BeginForm("TheWeather", "Location", FormMethod.Get))
+{
+    <input type="text" id="textCityWeather" placeholder="Ciudad" name="city" />
+    <input type="submit" />
+}
 
-@Html.ActionLink("Enviar", "AddLoc");
+@Html.ActionLink("Ver Ubicaciones", "GetLocations")
+
+

@@ -1,8 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Runtime.Serialization.Json;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
@@ -15,18 +20,89 @@ namespace WebConsumer.Controllers
         // GET: Location
         public ActionResult Index()
         {
-
             return View();
         }
 
-        public ActionResult AddLoc()
+        public ActionResult TheWeather(string city)
+        {
+            var weather = AskWeather(city);
+            return View(weather);
+        }
+
+        [HttpGet]
+        public Main AskWeather(string CITY) 
+        {
+            var url = ("http://" + $"api.openweathermap.org/data/2.5/weather?q={CITY}&units=metric&appid=1325eed5954aa3432564f94dcef08161");
+            var uri= new Uri(url);
+            var currentWeather = GetWeather<WeatherModel>(uri);
+            return currentWeather;
+        }
+
+        //RETORNA UNICAMENTE INFO BASE DEL CLIMA (MAIN)
+        public Main GetWeather<T>(Uri uri)
+        {
+            string json;
+            //peticion
+            WebRequest request = WebRequest.Create(uri);
+            //headers
+            request.Method = "GET";
+            request.PreAuthenticate = true;
+            request.ContentType = "application/json;charset=utf-8'";
+            request.Timeout = 10000; //esto es opcional
+
+            //Envia la peticion esperando respuesta
+            var httpResponse = (HttpWebResponse)request.GetResponse();
+
+            //Lee la respuesta 
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                json = streamReader.ReadToEnd();
+            }
+
+            //Deserializa el objeto Json a la clase C#
+            WeatherModel weather = JsonConvert.DeserializeObject<WeatherModel>(json);
+            return weather.Main;
+        }
+
+
+        [HttpGet]
+        public ActionResult GetLocations()
+        {
+            var uri = new Uri("https://localhost:44331/api/ApiLoc");
+
+            string json;
+            WebRequest request = WebRequest.Create(uri);
+            request.Method = "GET";
+            request.PreAuthenticate = false;
+            request.ContentType = "application/json;charset=utf-8'";
+            request.Timeout = 10000; //esto es opcional
+
+            //Envia la peticion esperando respuesta
+            var httpResponse = (HttpWebResponse)request.GetResponse();
+
+            //Lee la respuesta 
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                json = streamReader.ReadToEnd();
+            }
+
+            //Deserializa el objeto Json a la clase C#
+            var oLocations = JsonConvert.DeserializeObject<List<LocationModel>>(json);
+            return null;
+        }
+
+        // RECIBE LA CIUDAD A INGRESAR Y LLAMA A LA FUNCION API
+        [HttpPost]
+        public ActionResult AddLoc(string city)
         {
             LocationModel location = new LocationModel();
-            location.City = "Ciudad";
+            location.City = city;
             var resultado = Send<LocationModel>("https://localhost:44331/api/ApiLoc", location, "POST");
             return RedirectToAction("Index");
         }
 
+
+        // EJECUCION DEL API REQUEST
         public string Send<T>(string url, T objectRequest, string method = "POST")
         {
             string result = "";
@@ -35,7 +111,7 @@ namespace WebConsumer.Controllers
                 JavaScriptSerializer js = new JavaScriptSerializer();
 
                 //serializamos el objeto
-                string json = Newtonsoft.Json.JsonConvert.SerializeObject(objectRequest);
+                string json = JsonConvert.SerializeObject(objectRequest);
 
                 //peticion
                 WebRequest request = WebRequest.Create(url);
