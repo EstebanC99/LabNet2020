@@ -1,29 +1,48 @@
 ﻿@model List<WebConsumer.Models.LocationModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ClimApi";
 }
 
-<h2>Index</h2>
-@using (Html.BeginForm("AddLoc", "Location", FormMethod.Post))
-{
-    <h3>Insertar nueva ubicacion</h3>
-    <input type="text" id="textCity" placeholder="Nombre de ciudad..." name="city" />
-    <input type="submit" value="Insertar"/>
-}
-@using (Html.BeginForm("TheWeather", "Location", FormMethod.Get))
-{
-    <label for="textCityWeather">Elija ciudad a consultar: </label>
-    <input type="search" id="textCityWeather" placeholder="Ciudades..." name="city" list="locationsList"/>
-    <input type="submit" />
-    <datalist id="locationsList">
-        @foreach(var loc in Model)
-         {
-            <option>@loc.City</option>
-         };
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="~/Content/index-style.css" media="screen" />
 
-    </datalist>
-}
+
+<h2>@ViewBag.Title</h2>
+
+<div id="divForms">
+    @using (Html.BeginForm("AddLoc", "Location", FormMethod.Post))
+    {
+        <h3>Nueva ubicacion</h3>
+        <input type="text" id="textCity" placeholder="Nombre de ciudad..." name="city" />
+        <input type="submit" value="Insertar" />
+    }
+    @using (Html.BeginForm("TheWeather", "Location", FormMethod.Get))
+    {
+        <h3>¿Que tal esta el clima?</h3>
+        <label for="textCityWeather" style="color:#808080;width:100%;text-align:left">Elija ciudad a consultar: </label>
+        <input type="search" id="textCityWeather" placeholder="Ciudades..." name="city" list="locationsList" autocomplete="off" />
+        <input type="submit" />
+        <datalist id="locationsList">
+            @foreach (var loc in Model)
+            {
+                <option>@loc.City</option>
+            };
+
+        </datalist>
+    }
+</div>
+<div id="divWeather">
+    <h1>Weather: @ViewBag.City</h1>
+    <div id="divInfoWeather">
+        <p>Temperatura actual: @ViewBag.Weather.Temp °C</p>
+        <p>Presion: @ViewBag.Weather.Pressure Pa</p>
+        <p>Humedad: @ViewBag.Weather.Humidity %</p>
+        <p id="fecha">@DateTime.Now</p>
+    </div>
+</div>
+
+
 
 
 

@@ -18,8 +18,9 @@ namespace WebConsumer.Controllers
     public class LocationController : Controller
     {
         // GET: Location
-        public ActionResult Index()
+        public ActionResult Index(Main weather)
         {
+            ViewBag.Weather = weather;
             List<LocationModel> locations = GetLocations();
             return View(locations);
         }
@@ -27,7 +28,8 @@ namespace WebConsumer.Controllers
         public ActionResult TheWeather(string city)
         {
             var weather = AskWeather(city);
-            return View(weather);
+            ViewBag.City = city;
+            return RedirectToAction("Index", weather);
         }
 
 
