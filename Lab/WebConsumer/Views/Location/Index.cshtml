@@ -1,4 +1,5 @@
-﻿
+﻿@model List<WebConsumer.Models.LocationModel>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -6,15 +7,23 @@
 <h2>Index</h2>
 @using (Html.BeginForm("AddLoc", "Location", FormMethod.Post))
 {
+    <h3>Insertar nueva ubicacion</h3>
     <input type="text" id="textCity" placeholder="Nombre de ciudad..." name="city" />
-    <input type="submit" />
+    <input type="submit" value="Insertar"/>
 }
 @using (Html.BeginForm("TheWeather", "Location", FormMethod.Get))
 {
-    <input type="text" id="textCityWeather" placeholder="Ciudad" name="city" />
+    <label for="textCityWeather">Elija ciudad a consultar: </label>
+    <input type="search" id="textCityWeather" placeholder="Ciudades..." name="city" list="locationsList"/>
     <input type="submit" />
+    <datalist id="locationsList">
+        @foreach(var loc in Model)
+         {
+            <option>@loc.City</option>
+         };
+
+    </datalist>
 }
 
-@Html.ActionLink("Ver Ubicaciones", "GetLocations")
 
 
