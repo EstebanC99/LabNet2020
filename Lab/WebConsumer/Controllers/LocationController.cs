@@ -20,6 +20,7 @@ namespace WebConsumer.Controllers
         // GET: Location
         public ActionResult Index(Main weather)
         {
+            ViewBag.Error = TempData["Error"];
             ViewBag.Weather = weather;
             ViewBag.City = TempData["City"];
             List<LocationModel> locations = GetLocations();
@@ -28,9 +29,18 @@ namespace WebConsumer.Controllers
 
         public ActionResult TheWeather(string city)
         {
-            var weather = AskWeather(city);
-            TempData["City"] = city;
-            return RedirectToAction("Index", weather);
+            try
+            {
+                var weather = AskWeather(city);
+                TempData["City"] = city;
+                return RedirectToAction("Index", weather);
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = ex.Message;
+                return RedirectToAction("Index", new Main ());
+            }
+
         }
 
 

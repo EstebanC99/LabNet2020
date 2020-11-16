@@ -14,6 +14,21 @@
 
 <h2>@ViewBag.Title</h2>
 
+@{ 
+    if(ViewBag.Error != "")
+    {
+        <script>
+            alertify.error("La ciudad no fue encontrada")
+        </script>
+    } else
+    {
+        <script>
+            alertify.success("Clima actualizado")
+        </script>
+    }
+}
+
+
 <div id="divForms">
     @using (Html.BeginForm("AddLoc", "Location", FormMethod.Post, new { @id = "form-insert" }))
     {

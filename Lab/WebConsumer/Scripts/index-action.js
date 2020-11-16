@@ -2,6 +2,8 @@
 
     DefineHours();
 
+    ValidateError();
+
     $("#insertSubmit").click(function () {
         event.preventDefault();
         if ($("#textCity").val().length >= 2) {
@@ -16,6 +18,7 @@
     });
 
 });
+
 
 function DefineHours() {
     var fecha = new Date();

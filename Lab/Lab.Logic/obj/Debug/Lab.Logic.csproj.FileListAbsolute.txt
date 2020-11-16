@@ -42,3 +42,11 @@ F:\GitRepositorios\LabNet2020\Lab\Lab.Logic\bin\Debug\Newtonsoft.Json.xml
 F:\GitRepositorios\LabNet2020\Lab\Lab.Logic\bin\Debug\System.Net.Http.Formatting.xml
 F:\GitRepositorios\LabNet2020\Lab\Lab.Logic\bin\Debug\System.Web.Http.xml
 F:\GitRepositorios\LabNet2020\Lab\Lab.Logic\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Logic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Logic\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Logic\bin\Debug\System.Web.Http.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Logic\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Logic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Logic\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Logic\bin\Debug\System.Web.Http.xml
+C:\Users\Esteban\Documents\GitHub\LabNet2020\Lab\Lab.Logic\bin\Debug\System.Web.Http.WebHost.xml
