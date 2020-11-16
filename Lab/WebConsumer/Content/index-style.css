@@ -39,7 +39,8 @@ input{
     border: 2px solid rgba(105, 105, 105, 0.83);
     border-radius: 5px;
     background-image: url(https://media.giphy.com/media/o7R0zQ62m8Nk4/giphy.gif);
-    /*background-image: url(https://media.giphy.com/media/cICPp2aw1sEashhIDn/giphy.gif);*/
+    background-position: center;
+    /*background-image: url(https://media.giphy.com/media/fKvKAbkg5OtGw/giphy.gif);*/
     background-size: cover;
 }
 
@@ -68,5 +69,9 @@ form {
     box-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
 }
 
+p{
+    font-family:Calibri;
+    font-size: 24px;
+}
 
 
