@@ -2,22 +2,22 @@
 
     DefineHours();
 
-    ValidateError();
 
     $("#insertSubmit").click(function () {
         event.preventDefault();
         if ($("#textCity").val().length >= 2) {
-            alertify.success('Cargado con exito');
+            alertify.success("Cargado con exito");
             setTimeout(function () {
                 $("#form-insert").submit();
             }, 1500);
         } else {
-            alertify.error('Error al cargar');
+            alertify.error("Ciudad vacia");
             return false;
         };
     });
 
 });
+
 
 
 function DefineHours() {

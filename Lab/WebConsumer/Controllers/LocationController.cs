@@ -33,11 +33,12 @@ namespace WebConsumer.Controllers
             {
                 var weather = AskWeather(city);
                 TempData["City"] = city;
+                TempData["Error"] = JsonConvert.SerializeObject("");
                 return RedirectToAction("Index", weather);
             }
             catch (Exception ex)
             {
-                TempData["Error"] = ex.Message;
+                TempData["Error"] = JsonConvert.SerializeObject(ex.Message);
                 return RedirectToAction("Index", new Main ());
             }
 

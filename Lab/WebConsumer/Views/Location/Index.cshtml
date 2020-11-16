@@ -6,27 +6,26 @@
 <!-- JS -->
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="~/Scripts/index-action.js"></script>
+<script type="text/javascript" src="~/Scripts/alertify.min.js"></script>
+<script type="text/javascript">
+        var error = @Html.Raw(ViewBag.Error);
+        if (error != "") {
+            alertify.error("Ciudad inexistente");
+        } else {
+            alertify.success("Clima actualizado");
+        }
+</script>
+
 
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="~/Content/index-style.css" media="screen" />
 <link rel="stylesheet" href="~/Content/alertifyjs/alertify.min.css" />
 <link rel="stylesheet" href="~/Content/alertifyjs/themes/default.min.css" />
 
-<h2>@ViewBag.Title</h2>
 
-@{ 
-    if(ViewBag.Error != "")
-    {
-        <script>
-            alertify.error("La ciudad no fue encontrada")
-        </script>
-    } else
-    {
-        <script>
-            alertify.success("Clima actualizado")
-        </script>
-    }
-}
+
+
+<h2>@ViewBag.Title</h2>
 
 
 <div id="divForms">
