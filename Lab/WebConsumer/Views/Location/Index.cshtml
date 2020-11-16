@@ -9,23 +9,25 @@
 
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="~/Content/index-style.css" media="screen" />
-
+<link rel="stylesheet" href="~/Content/alertifyjs/alertify.min.css" />
+<link rel="stylesheet" href="~/Content/alertifyjs/themes/default.min.css" />
 
 <h2>@ViewBag.Title</h2>
 
 <div id="divForms">
-    @using (Html.BeginForm("AddLoc", "Location", FormMethod.Post))
+    @using (Html.BeginForm("AddLoc", "Location", FormMethod.Post, new { @id = "form-insert" }))
     {
         <h3>Nueva ubicacion</h3>
-        <input type="text" id="textCity" placeholder="Nombre de ciudad..." name="city" />
-        <input type="submit" value="Insertar" />
+        <input type="text" id="textCity" placeholder="Nombre de ciudad..." name="city" autocomplete="off" />
+        <input type="submit" value="Insertar" id="insertSubmit" />
     }
+
     @using (Html.BeginForm("TheWeather", "Location", FormMethod.Get))
     {
         <h3>¿Que tal esta el clima?</h3>
         <label for="textCityWeather" style="color:#808080;width:100%;text-align:left">Elija ciudad a consultar: </label>
         <input type="search" id="textCityWeather" placeholder="Ciudades..." name="city" list="locationsList" autocomplete="off" />
-        <input type="submit" value="Consultar" id="submitWeather"/>
+        <input type="submit" value="Consultar" id="submitWeather" />
         <datalist id="locationsList">
             @foreach (var loc in Model)
             {
@@ -34,6 +36,7 @@
 
         </datalist>
     }
+
 </div>
 <div id="divWeather">
     <h1>Weather: @ViewBag.City</h1>

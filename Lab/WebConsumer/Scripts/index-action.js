@@ -2,6 +2,19 @@
 
     DefineHours();
 
+    $("#insertSubmit").click(function () {
+        event.preventDefault();
+        if ($("#textCity").val().length >= 2) {
+            alertify.success('Cargado con exito');
+            setTimeout(function () {
+                $("#form-insert").submit();
+            }, 1500);
+        } else {
+            alertify.error('Error al cargar');
+            return false;
+        };
+    });
+
 });
 
 function DefineHours() {
@@ -13,3 +26,4 @@ function DefineHours() {
         $("#divWeather").css("background-image, background-size", "url(https://media.giphy.com/media/o7R0zQ62m8Nk4/giphy.gif), cover");
     };
 };
+
